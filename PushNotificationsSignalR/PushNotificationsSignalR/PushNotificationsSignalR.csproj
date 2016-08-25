@@ -167,7 +167,9 @@
     <Content Include="scripts\jquery.signalR-2.2.1.js" />
     <Content Include="scripts\jquery.signalR-2.2.1.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -176,10 +178,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Contacts.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="NotificationComponent.cs" />
     <Compile Include="notificationHub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utility\DatabaseHandler.cs" />
+    <Compile Include="ViewModels\UserWithContact.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

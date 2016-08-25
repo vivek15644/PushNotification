@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR;
 using PushNotificationsSignalR.Models;
+using PushNotificationsSignalR.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -58,6 +59,12 @@ namespace PushNotificationsSignalR
         {
             Contacts _Contact = new Contacts();
             return _Contact.Read(afterDate);
+        }
+
+        public List<UserWithContact> GetUser(DateTime afterDate)
+        {
+            UserWithContact _User = new UserWithContact();
+            return _User.Read(afterDate);
         }
     }
 }

@@ -122,14 +122,16 @@
                 $('#notiContent').append($('<li>Loading...</li>'));
                 $.ajax({
                     type: 'GET',
-                    url: '/home/GetNotificationContacts',
+                    url: '/home/GetNotificationUser',
                     success: function (response) {
                         $('#notiContent').empty();
                         if (response.length  == 0) {
                             $('#notiContent').append($('<li>No data available</li>'));
                         }
                         $.each(response, function (index, value) {
-                            $('#notiContent').append($('<li>New contact : ' + value.ContactName + ' (' + value.ContactNo + ') added</li>'));
+                            
+
+                            $('#notiContent').append($('<li>New User : ' + value["Contact"].ContactName + ' (City: ' + value["User"].City+', ContactNo: '+ value["Contact"].ContactNo + ') added</li>'));
                         });
                     },
                     error: function (error) {

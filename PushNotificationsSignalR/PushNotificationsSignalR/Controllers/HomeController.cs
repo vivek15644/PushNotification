@@ -24,5 +24,16 @@ namespace PushNotificationsSignalR.Controllers
 
             return new JsonResult { Data = list, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
+
+        public JsonResult GetNotificationUser()
+        {
+            var notificationRegisterTime = Session["LastUpdated"] != null ? Convert.ToDateTime(Session["LastUpdated"]) : DateTime.Now;
+            NotificationComponent NC = new NotificationComponent();
+            var list = NC.GetUser(notificationRegisterTime);
+
+            Session["LastUpdated"] = DateTime.Now;
+
+            return new JsonResult { Data = list, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
     }
 }

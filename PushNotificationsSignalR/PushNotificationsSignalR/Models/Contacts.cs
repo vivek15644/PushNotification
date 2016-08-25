@@ -12,8 +12,12 @@ namespace PushNotificationsSignalR.Models
         public int ContactID { get; set; }
         public string ContactName { get; set; }
         public string ContactNo { get; set; }
-        public DateTime AddedOn { get; set; }
 
+        /// <summary>
+        /// read contact details
+        /// </summary>
+        /// <param name="afterDate"></param>
+        /// <returns></returns>
         public List<Contacts> Read(DateTime afterDate)
         {
             string Conn = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
@@ -54,5 +58,6 @@ namespace PushNotificationsSignalR.Models
                 return null;
             }
         }
+
     }
 }
