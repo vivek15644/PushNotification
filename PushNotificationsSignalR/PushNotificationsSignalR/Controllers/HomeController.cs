@@ -35,5 +35,6 @@ namespace PushNotificationsSignalR.Controllers
 
             return new JsonResult { Data = list, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
+        //something added by vivek
     }
 }

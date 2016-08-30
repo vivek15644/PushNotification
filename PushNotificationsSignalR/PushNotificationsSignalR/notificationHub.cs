@@ -8,9 +8,6 @@ namespace PushNotificationsSignalR
 {
     public class notificationHub : Hub
     {
-        //public void Hello()
-        //{
-        //    Clients.All.hello();
-        //}
+        
     }
 }
