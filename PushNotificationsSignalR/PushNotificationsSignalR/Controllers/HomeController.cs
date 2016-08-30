@@ -14,6 +14,7 @@ namespace PushNotificationsSignalR.Controllers
             return View();
         }
 
+        //fsduyvgduykwduvbqdv vbdudbvuobioadnviwdb  bvbjvbuivbipvqu di ubwuvbquvdqocnioqd
         public JsonResult GetNotificationContacts()
         {
             var notificationRegisterTime = Session["LastUpdated"] != null ? Convert.ToDateTime(Session["LastUpdated"]) : DateTime.Now;
@@ -34,6 +35,7 @@ namespace PushNotificationsSignalR.Controllers
             Session["LastUpdated"] = DateTime.Now;
 
             return new JsonResult { Data = list, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            //jhvgsuivwvsdovhwiofhvbsdivhvosdhvpvndpivw
         }
     }
 }
